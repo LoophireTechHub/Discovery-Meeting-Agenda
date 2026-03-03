@@ -4,280 +4,327 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Discovery Call Confirmed | Loophire</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-:root {
-  --color-white: #FFFFFF;
-  --color-primary-dark: #1C223C;
-  --color-secondary-red: #DE635E;
-  --color-text-body: rgba(0,0,0,0.70);
-  --color-background-pink: rgba(249,225,225,0.24);
-}
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #EAEBF0;
-  color: var(--color-primary-dark);
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background: #f5f5f5;
   -webkit-font-smoothing: antialiased;
 }
 
-.email-wrapper {
-  max-width: 500px;
-  margin: 0 auto;
-  background: var(--color-white);
-  padding: 24px;
+.email-outer {
+  background: white;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
 }
 
-/* Header */
-.header {
-  margin-bottom: 16px;
+.email-wrapper {
+  width: 648px;
+  padding: 24px;
+  background: rgba(249, 225, 225, 0.24);
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.email-inner {
+  flex: 1;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Header Card */
+.header-card {
+  align-self: stretch;
+  padding: 32px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(90, 94, 107, 0.12), 0px 24px 48px -8px rgba(90, 94, 107, 0.06);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .logo {
-  height: 22px;
+  height: 46px;
   width: auto;
-  margin-bottom: 16px;
-  display: block;
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--color-primary-dark);
+  color: #161B30;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 39.2px;
 }
 
-/* Hero Image */
+/* Hero Section */
+.hero-card {
+  align-self: stretch;
+  padding: 12px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(90, 94, 107, 0.12), 0px 24px 48px -8px rgba(90, 94, 107, 0.06);
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 134px;
+  background: #1C223C;
+}
+
 .hero-image {
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 16px;
+  border-radius: 12px;
 }
 
 /* Content Card */
 .content-card {
-  background: var(--color-background-pink);
+  align-self: stretch;
+  padding: 24px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(90, 94, 107, 0.12), 0px 24px 48px -8px rgba(90, 94, 107, 0.06);
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 24px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .greeting {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--color-primary-dark);
-  margin-bottom: 12px;
+  color: #161B30;
+  font-size: 20px;
+  font-family: 'Stolzl', 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
 }
 
-.card-body {
-  display: flex;
-  gap: 16px;
-}
-
-.card-text {
-  flex: 1;
-}
-
-.card-text p {
-  font-size: 13px;
-  color: var(--color-text-body);
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-/* Avatar with label */
-.avatar-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  min-width: 50px;
-}
-
-.avatar-wrapper {
-  position: relative;
-  width: 48px;
-  height: 48px;
-}
-
-.avatar-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--color-white);
-}
-
-.avatar-icon {
-  position: absolute;
-  bottom: -2px;
-  right: -2px;
-  width: 18px;
-  height: 18px;
-  background: var(--color-background-pink);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-.avatar-icon svg {
-  width: 10px;
-  height: 10px;
-  color: var(--color-secondary-red);
-}
-
-.avatar-name {
-  font-size: 11px;
-  color: var(--color-text-body);
-  font-weight: 500;
+.description {
+  color: #6A5E71;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23.25px;
 }
 
 .cta-button {
-  display: block;
-  width: 100%;
-  background: var(--color-secondary-red);
-  color: var(--color-white);
-  text-align: center;
-  padding: 14px 24px;
+  align-self: stretch;
+  height: 48px;
+  padding: 8px 12px 8px 20px;
+  background: #DE635E;
   border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 16px;
 }
 
-/* What's Inside Section */
-.inside-section {
-  margin-bottom: 20px;
+.cta-button span {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
+}
+
+.cta-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+/* What's Inside Card */
+.inside-card {
+  align-self: stretch;
+  padding: 24px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(90, 94, 107, 0.12), 0px 24px 48px -8px rgba(90, 94, 107, 0.06);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .inside-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--color-primary-dark);
-  margin-bottom: 16px;
+  color: #161B30;
+  font-size: 20px;
+  font-family: 'Stolzl', 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
 }
 
 .inside-item {
+  align-self: stretch;
+  padding: 12px;
+  background: rgba(234, 235, 240, 0.24);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
   display: flex;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 14px;
+}
+
+.inside-item:first-of-type {
+  background: rgba(234, 235, 240, 0.32);
 }
 
 .inside-icon {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  background: var(--color-background-pink);
+  padding: 8px;
+  background: #1C223C;
   border-radius: 8px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .inside-icon svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--color-secondary-red);
+  width: 24px;
+  height: 24px;
+  stroke: white;
+  stroke-width: 1.5;
   fill: none;
-  stroke-width: 2;
+}
+
+.inside-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .inside-content h4 {
-  font-size: 13px;
+  color: #161B30;
+  font-size: 14px;
   font-weight: 600;
-  color: var(--color-primary-dark);
-  margin-bottom: 2px;
+  line-height: 32px;
 }
 
 .inside-content p {
-  font-size: 12px;
-  color: var(--color-text-body);
-  line-height: 1.4;
+  color: #888787;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
-/* Disclaimer */
-.disclaimer {
+/* Disclaimer Card */
+.disclaimer-card {
+  align-self: stretch;
+  padding: 24px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(90, 94, 107, 0.12), 0px 24px 48px -8px rgba(90, 94, 107, 0.06);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.disclaimer-text {
   text-align: center;
-  padding: 16px 0;
-  margin-bottom: 20px;
-}
-
-.disclaimer p {
-  font-size: 12px;
-  color: var(--color-text-body);
-  line-height: 1.5;
+  color: #161B30;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23.25px;
 }
 
 /* Footer */
 .footer {
-  background: var(--color-primary-dark);
-  margin: 0 -24px -24px -24px;
-  padding: 24px;
-}
-
-.footer-top {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 24px;
 }
 
 .footer-logo {
-  height: 18px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  margin-bottom: 10px;
+  width: 131px;
+  height: auto;
 }
 
-.footer-address {
-  font-size: 11px;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.5;
+.footer-address,
+.footer-contact {
+  color: rgba(0, 0, 0, 0.70);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.7px;
+  text-align: center;
+}
+
+.footer-contact a {
+  color: rgba(0, 0, 0, 0.70);
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+  margin-top: 16px;
+}
+
+.footer-column {
+  text-align: center;
 }
 
 .footer-column h5 {
-  font-size: 11px;
+  color: black;
+  font-size: 14px;
   font-weight: 600;
-  color: var(--color-white);
-  margin-bottom: 6px;
+  line-height: 21.7px;
+  margin-bottom: 4px;
 }
 
-.footer-column p,
-.footer-column a {
-  font-size: 11px;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.6;
-  text-decoration: none;
+.footer-column h5::after {
+  content: '';
   display: block;
+  width: 46px;
+  height: 2px;
+  background: #DE635E;
+  margin: 4px auto 0;
 }
 
-.footer-right {
-  text-align: right;
+.footer-column a {
+  display: block;
+  color: rgba(0, 0, 0, 0.70);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.7px;
+  text-decoration: none;
 }
 
 .social-icons {
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 16px;
 }
 
 .social-icon {
-  width: 28px;
-  height: 28px;
-  background: var(--color-secondary-red);
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  background: #DE635E;
+  border-radius: 15px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .social-icon img {
@@ -288,124 +335,122 @@ body {
 </head>
 <body>
 
-<div class="email-wrapper">
+<div class="email-outer">
+  <div class="email-wrapper">
+    <div class="email-inner">
 
-  <!-- Header -->
-  <div class="header">
-    <img src="../assets/images/image 1.png" alt="Loophire" class="logo">
-    <h1 class="title">Discovery call confirmed</h1>
-  </div>
-
-  <!-- Hero Image -->
-  <img src="../assets/images/image 27.png" alt="Welcome" class="hero-image">
-
-  <!-- Content Card -->
-  <div class="content-card">
-    <h2 class="greeting">Hello,{{PROSPECT_NAME}}</h2>
-
-    <div class="card-body">
-      <div class="card-text">
-        <p>Your call is on {{CALL_DATE}}. Before we meet, we put together a short briefing so our time together is strategic not a generic walkthrough.</p>
-        <p>We've taken what you shared, layered in our own research, and built a page showing exactly how we're thinking about your hiring landscape.</p>
+      <!-- Header Card -->
+      <div class="header-card">
+        <img src="../assets/images/image 1.png" alt="Loophire" class="logo">
+        <h1 class="title">Discovery call confirmed</h1>
       </div>
 
-      <div class="avatar-section">
-        <div class="avatar-wrapper">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" class="avatar-img">
-          <div class="avatar-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+      <!-- Hero Card -->
+      <div class="hero-card">
+        <div class="hero-image-container">
+          <img src="../assets/images/image 27.png" alt="" class="hero-image">
+        </div>
+      </div>
+
+      <!-- Content Card -->
+      <div class="content-card">
+        <div class="greeting">Hello,{{PROSPECT_NAME}}</div>
+        <div class="description">
+          Your call is on {{CALL_DATE}}. Before we meet, we put together a short briefing so our time together is strategic not a generic walkthrough.<br><br>
+          We've taken what you shared, layered in our own research, and built a page showing exactly how we're thinking about your hiring landscape.
+        </div>
+        <a href="{{AGENDA_URL}}" class="cta-button">
+          <span>View our Agenda</span>
+          <svg viewBox="0 0 20 20">
+            <path d="M4 10h12M12 6l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- What's Inside Card -->
+      <div class="inside-card">
+        <div class="inside-title">What is inside?</div>
+
+        <div class="inside-item">
+          <div class="inside-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
+          <div class="inside-content">
+            <h4>What we heard</h4>
+            <p>Your priorities and constraints, reflected back for alignment</p>
+          </div>
         </div>
-        <span class="avatar-name">Chris</span>
-      </div>
-    </div>
 
-    <a href="{{AGENDA_URL}}" class="cta-button">View our Agenda →</a>
-  </div>
+        <div class="inside-item">
+          <div class="inside-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" rx="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="14" y="3" width="7" height="7" rx="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="3" y="14" width="7" height="7" rx="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="14" y="14" width="7" height="7" rx="1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="inside-content">
+            <h4>The numbers</h4>
+            <p>17-day placements, 96% retention how we stack up</p>
+          </div>
+        </div>
 
-  <!-- What's Inside Section -->
-  <div class="inside-section">
-    <h3 class="inside-title">What is inside?</h3>
+        <div class="inside-item">
+          <div class="inside-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="inside-content">
+            <h4>How it works</h4>
+            <p>Our 8-stage framework and what we'll cover on the call</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="inside-item">
-      <div class="inside-icon">
-        <svg viewBox="0 0 24 24">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
+      <!-- Disclaimer Card -->
+      <div class="disclaimer-card">
+        <div class="disclaimer-text">It's direct, relevant, and takes about 3 minutes. If anything's off, we'll fix it on the call alignment is the point</div>
       </div>
-      <div class="inside-content">
-        <h4>What we heard</h4>
-        <p>Your priorities and constraints, reflected back for alignment</p>
-      </div>
-    </div>
 
-    <div class="inside-item">
-      <div class="inside-icon">
-        <svg viewBox="0 0 24 24">
-          <path d="M18 20V10M12 20V4M6 20v-6"/>
-        </svg>
-      </div>
-      <div class="inside-content">
-        <h4>The numbers</h4>
-        <p>17-day placements, 96% retention how we stack up</p>
-      </div>
-    </div>
-
-    <div class="inside-item">
-      <div class="inside-icon">
-        <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M12 6v6l4 2"/>
-        </svg>
-      </div>
-      <div class="inside-content">
-        <h4>How it works</h4>
-        <p>Our 8-stage framework and what we'll cover on the call</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Disclaimer -->
-  <div class="disclaimer">
-    <p>It's direct, relevant, and takes about 3 minutes. If anything's off, we'll fix it on the call alignment is the point</p>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <div class="footer-top">
-      <div class="footer-left">
+      <!-- Footer -->
+      <div class="footer">
         <img src="../assets/images/image 1.png" alt="Loophire" class="footer-logo">
-        <p class="footer-address">11718 Nicholas St, STE 101 Omaha,<br>NE 68154</p>
+        <div class="footer-address">11718 Nicholas St, STE 101 Omaha, NE 68154</div>
+        <div class="footer-contact">402-769-2775 <a href="mailto:support@loophire.com">support@loophire.com</a></div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h5>Contact us</h5>
+            <a href="tel:4027692775">402-769-2775</a>
+            <a href="mailto:support@loophire.com">support@loophire.com</a>
+          </div>
+          <div class="footer-column">
+            <h5>Get matched</h5>
+            <a href="#">Employers</a>
+            <a href="#">Job seekers</a>
+          </div>
+        </div>
+
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="../assets/icons/Instagram.svg" alt="Instagram">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="../assets/icons/Facebook.svg" alt="Facebook">
+          </a>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h5>Contact us</h5>
-        <p>402-769-2775</p>
-        <a href="mailto:support@loophire.com">support@loophire.com</a>
-      </div>
-
-      <div class="footer-column footer-right">
-        <h5>Get matched</h5>
-        <a href="#">Employers</a>
-        <a href="#">Job seekers</a>
-      </div>
-    </div>
-
-    <div class="social-icons">
-      <a href="#" class="social-icon">
-        <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn">
-      </a>
-      <a href="#" class="social-icon">
-        <img src="../assets/icons/Instagram.svg" alt="Instagram">
-      </a>
-      <a href="#" class="social-icon">
-        <img src="../assets/icons/Facebook.svg" alt="Facebook">
-      </a>
     </div>
   </div>
-
 </div>
 
 </body>
