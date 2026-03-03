@@ -92,9 +92,7 @@ body {
   gap: 8px;
   border-radius: 12px;
   background: var(--color-background-pink);
-  margin-top: -40px;
   position: relative;
-  z-index: 1;
 }
 
 .greeting {
@@ -109,6 +107,7 @@ body {
   color: var(--color-text-body-light);
   line-height: 1.7;
   margin-bottom: 20px;
+  padding-right: 70px;
 }
 
 .cta-button {
@@ -129,20 +128,17 @@ body {
 }
 
 /* Avatar overlay */
-.avatar-container {
-  position: relative;
-  width: 100%;
-}
-
 .avatar-float {
   position: absolute;
-  right: 0;
-  top: -10px;
-  width: 64px;
-  height: 64px;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   border: 3px solid var(--color-white);
   object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* What's Inside Section */
@@ -201,11 +197,9 @@ body {
 
 /* Disclaimer */
 .disclaimer {
-  background: var(--color-surface-light);
-  padding: 20px 24px;
+  padding: 20px 0;
   text-align: center;
   width: 100%;
-  border-radius: 8px;
 }
 
 .disclaimer p {
@@ -323,10 +317,8 @@ body {
 
   <!-- Content Card -->
   <div class="content-card">
-    <div class="avatar-container">
-      <h2 class="greeting">Hello, {{PROSPECT_NAME}}</h2>
-      <img src="https://loophire.com/wp-content/uploads/chris-loophire.jpg" alt="Chris" class="avatar-float">
-    </div>
+    <img src="https://loophire.com/wp-content/uploads/chris-loophire.jpg" alt="Chris" class="avatar-float">
+    <h2 class="greeting">Hello,{{PROSPECT_NAME}}</h2>
     <p class="description">
       Your call is on {{CALL_DATE}}. Before we meet, we put together a short briefing so our time together is strategic not a generic walkthrough.<br><br>
       We've taken what you shared, layered in our own research, and built a page showing exactly how we're thinking about your hiring landscape.
