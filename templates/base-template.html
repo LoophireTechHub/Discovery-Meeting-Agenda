@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Discovery Call Prep Guide | Loophire</title>
+<link rel="stylesheet" href="https://use.typekit.net/tjr8fvt.css">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1c223c;
+  --coral: #de635e;
+  --teal: #2a615e;
+  --beige: #eee1ce;
+  --off-white: #f8f7f5;
+  --white: #ffffff;
+  --gray: #5d6174;
+  --gray-light: #959db2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "objektiv-mk1", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--off-white);
+  color: var(--gray);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  background: var(--navy);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-family: "objektiv-mk1", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-coral {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--white);
+}
+
+.btn-coral:hover {
+  background: transparent;
+  color: var(--coral);
+}
+
+.btn-navy {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+.btn-navy:hover {
+  background: transparent;
+  color: var(--navy);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+/* HERO */
+.hero {
+  background: var(--navy);
+  padding: 80px 40px 100px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: 'Spectral', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: "objektiv-mk1", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--coral);
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* MAIN */
+.main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 50px;
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.section-eyebrow .num {
+  width: 32px;
+  height: 32px;
+  background: var(--coral);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.section h2 {
+  font-family: "objektiv-mk1", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.section-intro {
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  color: var(--gray);
+  margin-bottom: 28px;
+}
+
+/* CORAL LINE ACCENT */
+.coral-line {
+  width: 60px;
+  height: 4px;
+  background: var(--coral);
+  margin-bottom: 20px;
+}
+
+/* PAIN CARDS */
+.pain-card {
+  background: var(--white);
+  border: 1px solid #e5e2dc;
+  border-left: 4px solid var(--coral);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 12px;
+}
+
+.pain-card:last-child {
+  margin-bottom: 0;
+}
+
+.pain-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.pain-card p {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* STATS */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--white);
+  border: 1px solid #e5e2dc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-item {
+  padding: 32px 20px;
+  text-align: center;
+  border-right: 1px solid #e5e2dc;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.stat-compare {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* TESTIMONIALS */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid #e5e2dc;
+  border-radius: 4px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--coral);
+}
+
+.testimonial-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+
+.testimonial-info p {
+  font-size: 13px;
+  color: var(--gray-light);
+}
+
+.testimonial-quote {
+  font-family: 'Spectral', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--gray);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.testimonial-logo {
+  height: 28px;
+  width: auto;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FRAMEWORK */
+.framework-card {
+  background: var(--white);
+  border: 1px solid #e5e2dc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.framework-header {
+  background: var(--navy);
+  padding: 28px 32px;
+  color: var(--white);
+}
+
+.framework-header h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.framework-header p {
+  font-family: 'Spectral', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+}
+
+.step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 32px;
+  border-bottom: 1px solid #e5e2dc;
+}
+
+.step-row:last-child {
+  border-bottom: none;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.step-content {
+  padding-top: 2px;
+}
+
+.step-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+
+.step-content p {
+  font-size: 14px;
+  color: var(--gray-light);
+}
+
+/* REFLECTIONS */
+.reflection-card {
+  background: var(--white);
+  border: 1px solid #e5e2dc;
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.reflection-card:last-child {
+  margin-bottom: 0;
+}
+
+.reflection-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reflection-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--teal);
+}
+
+.reflection-text {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.7;
+  padding-top: 8px;
+}
+
+/* CTA */
+.cta-section {
+  background: var(--navy);
+  border-radius: 4px;
+  padding: 50px 40px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cta-eyebrow {
+  font-family: 'Spectral', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+
+.cta-section h3 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: #e5e2dc;
+  margin: 50px 0;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--navy);
+  padding: 50px 40px;
+}
+
+.footer-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  margin-bottom: 16px;
+}
+
+.footer-logo img {
+  height: 26px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-left p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+
+.footer-left a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  color: var(--white);
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-right a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: var(--white);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav { padding: 0 20px; }
+
+  .hero { padding: 50px 20px 70px; }
+  .hero h1 { font-size: 32px; }
+  .hero-sub { font-size: 16px; }
+
+  .main { padding: 40px 20px 60px; }
+
+  .section h2 { font-size: 28px; }
+
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(2) { border-bottom: 1px solid #e5e2dc; }
+
+  .step-row { padding: 16px 20px; }
+  .framework-header { padding: 24px 20px; }
+
+  .cta-section { padding: 40px 20px; }
+  .cta-section h3 { font-size: 28px; }
+  .cta-buttons { flex-direction: column; }
+
+  .footer-inner { flex-direction: column; gap: 24px; }
+  .footer-right { text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px; }
+  .stat-number { font-size: 36px; }
+  .stat-item { padding: 24px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="https://loophire.com/wp-content/uploads/2023/06/loophire-logo.svg" alt="Loophire">
+  </div>
+  <a href="mailto:chris@loophire.com" class="btn btn-coral btn-sm">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+        <h1>Chris, here's the <span>agenda for our meeting.</span></h1>
+    <p class="hero-sub">We did our homework so we can make the most of our time together. Here's everything you need to know before we connect.</p>
+    <div class="hero-badge">
+      <span>📅</span>
+      <span>{{CALL_DATE_TIME}}</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <div class="section-eyebrow"><span class="num">1</span> What We Heard</div>
+    <h2>Your Priorities</h2>
+    <div class="coral-line"></div>
+    <p class="section-intro">Based on our conversation, here's what we understand matters most to you:</p>
+
+    <div class="pain-card">
+      <h4>Fill Seats Faster</h4>
+      <p>Get qualified people in place quickly so your team can stop covering gaps and start focusing on growth.</p>
+    </div>
+    <div class="pain-card">
+      <h4>Hire People Who Can Actually Do the Job</h4>
+      <p>Find candidates with real, proven experience — not just polished resumes — so you're confident from day one.</p>
+    </div>
+    <div class="pain-card">
+      <h4>Build a Team That Stays</h4>
+      <p>Bring on people who are the right fit for your culture and committed to growing with you long-term.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <div class="section-eyebrow"><span class="num">2</span> The Numbers</div>
+    <h2>How Loophire performs</h2>
+    <div class="coral-line"></div>
+    <p class="section-intro">1,000+ insurance placements since 2020:</p>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-number">19</div>
+        <div class="stat-label">Avg. Days to Placement</div>
+        <div class="stat-compare">Industry avg: 45+</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">96%</div>
+        <div class="stat-label">12-Month Retention</div>
+        <div class="stat-compare">Industry avg: 60%</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98.4%</div>
+        <div class="stat-label">Placement Success</div>
+        <div class="stat-compare">1,000+ Insurance Hires</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3:1</div>
+        <div class="stat-label">Candidate Ratio</div>
+        <div class="stat-compare">Industry avg: 8:1</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section">
+    <div class="section-eyebrow"><span class="num">3</span> What Our Clients Say</div>
+    <h2>Real results from agencies like yours</h2>
+    <div class="coral-line"></div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://loophire.com/wp-content/uploads/stephanie-dew.jpg" alt="Stephanie Dew" class="testimonial-avatar" onerror="this.style.background='var(--navy)'; this.style.display='block';">
+          <div class="testimonial-info">
+            <h4>Stephanie Dew</h4>
+            <p>President, WinStar Insurance Group</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">"Loophire was the best thing ever. They did everything and more we expected and helped us hire two incredible producers within 30 days of the project kick off. I highly recommend their services to anyone in the insurance space."</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://loophire.com/wp-content/uploads/blake-neben.jpg" alt="Blake Neben" class="testimonial-avatar" onerror="this.style.background='var(--navy)'; this.style.display='block';">
+          <div class="testimonial-info">
+            <h4>Blake Neben</h4>
+            <p>Partner, Unified Legacy Advisors</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">"Loophire has been instrumental in our growth strategy over the past three years, directly contributing to 70% of our overall progress. Chris and Maureen have built an outstanding team of caring, highly skilled talent consultants dedicated to matching the right talent with the right opportunities."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <div class="section-eyebrow"><span class="num">4</span> How It Works</div>
+    <h2>Our 8-stage search framework</h2>
+    <div class="coral-line"></div>
+    <p class="section-intro">Every placement follows this process — no guesswork, no wasted interviews.</p>
+
+    <div class="framework-card">
+      <div class="framework-header">
+        <h3>Precision Search Methodology</h3>
+        <p>What we'll cover on our call and how we'll work together.</p>
+      </div>
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Precision Hiring Discovery</h4>
+          <p>We learn what makes your team win — not just what's on the job description</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Market Intelligence Briefing</h4>
+          <p>Who's available, what they cost, and where competitors are losing talent</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Strategy Alignment</h4>
+          <p>A shared game plan built around your priorities — no guesswork</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Targeted Talent Outreach</h4>
+          <p>Direct access to proven insurance professionals — not job board applicants</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Insurance-Specific Vetting</h4>
+          <p>Screened for real competencies — carrier relationships, production, and culture fit</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>Candidate Intelligence Packages</h4>
+          <p>Detailed profiles with fit assessment and risk factors — not just resumes</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">7</div>
+        <div class="step-content">
+          <h4>Offer Engineering & Close</h4>
+          <p>We handle negotiations and neutralize counter-offers before they happen</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">8</div>
+        <div class="step-content">
+          <h4>Long-term Support</h4>
+          <p>Continued engagement to maximize retention and performance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <div class="section-eyebrow"><span class="num">5</span> Picture This</div>
+    <h2>What success looks like</h2>
+    <div class="coral-line"></div>
+
+    <div class="reflection-card">
+      <div class="reflection-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </div>
+      <span class="reflection-text">Open roles filled quickly with qualified talent — no more scrambling or settling just to fill a seat.</span>
+    </div>
+    <div class="reflection-card">
+      <div class="reflection-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/></svg>
+      </div>
+      <span class="reflection-text">New hires who deliver from day one, so you can stop second-guessing and start scaling with confidence.</span>
+    </div>
+    <div class="reflection-card">
+      <div class="reflection-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <span class="reflection-text">A stable, dedicated team that hits revenue targets and fuels the growth you've been planning for.</span>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <p class="cta-eyebrow">Looking forward to our conversation.</p>
+    <h3>Questions before we connect?</h3>
+    <div class="cta-buttons">
+      <a href="mailto:chris@loophire.com" class="btn btn-coral">Reply to Chris →</a>
+      <a href="#schedule" class="btn btn-outline">Reschedule Call</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="https://loophire.com/wp-content/uploads/2023/06/loophire-logo.svg" alt="Loophire">
+      </div>
+      <p>11718 Nicholas St., STE 101<br>Omaha, NE 68154</p>
+      <p style="margin-top: 8px;"><a href="tel:4027692775">(402) 769-2775</a> · <a href="mailto:chris@loophire.com">chris@loophire.com</a></p>
+    </div>
+    <div class="footer-right">
+      <p><a href="https://loophire.com">loophire.com</a></p>
+      <p style="margin-top: 4px;"><a href="https://loophire.com/loophire-llc-privacy-policy/">Privacy Policy</a></p>
+      <p style="margin-top: 12px;">© 2025 Loophire LLC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
