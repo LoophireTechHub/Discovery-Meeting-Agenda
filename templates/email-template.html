@@ -4,110 +4,141 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Discovery Call Confirmed | Loophire</title>
-<!--[if mso]>
-<noscript>
-<xml>
-<o:OfficeDocumentSettings>
-<o:PixelsPerInch>96</o:PixelsPerInch>
-</o:OfficeDocumentSettings>
-</xml>
-</noscript>
-<![endif]-->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Figma Design System Colors */
 :root {
   --color-white: #FFFFFF;
-  --color-black: #000000;
-  --color-primary-dark: #1C223C;           /* Bg/Primary N/Dark, Text/Heading */
-  --color-secondary-red: #DE635E;          /* Secondary/Pasta Red/500, Button/Primary */
-  --color-surface-page: #EAEBF0;           /* Surface/Page */
-  --color-text-body-light: rgba(0,0,0,0.70); /* Text/Body/Light */
-  --color-background-pink: rgba(249,225,225,0.24); /* #F9E1E1 at 24% */
-  --color-surface-light: rgba(234,235,240,0.24);   /* #EAEBF0 at 24% */
-  --color-surface-medium: rgba(234,235,240,0.32);  /* #EAEBF0 at 32% */
+  --color-primary-dark: #1C223C;
+  --color-secondary-red: #DE635E;
+  --color-text-body: rgba(0,0,0,0.70);
+  --color-background-pink: rgba(249,225,225,0.24);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--color-surface-page);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #EAEBF0;
   color: var(--color-primary-dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 .email-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 648px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 24px;
-  align-items: flex-start;
-  gap: 8px;
   background: var(--color-white);
+  padding: 24px;
 }
 
 /* Header */
 .header {
-  padding: 0 0 20px;
-  width: 100%;
+  margin-bottom: 16px;
 }
 
 .logo {
-  height: 24px;
+  height: 22px;
   width: auto;
+  margin-bottom: 16px;
+  display: block;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--color-primary-dark);
-  margin-top: 16px;
 }
 
 /* Hero Image */
 .hero-image {
   width: 100%;
-  height: 160px;
+  height: 150px;
   object-fit: cover;
+  border-radius: 8px;
   display: block;
-  border-radius: 12px;
+  margin-bottom: 16px;
 }
 
 /* Content Card */
 .content-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 24px;
-  align-items: flex-start;
-  gap: 8px;
-  border-radius: 12px;
   background: var(--color-background-pink);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
   position: relative;
 }
 
 .greeting {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--color-primary-dark);
   margin-bottom: 12px;
 }
 
-.description {
-  font-size: 14px;
-  color: var(--color-text-body-light);
-  line-height: 1.7;
-  margin-bottom: 20px;
-  padding-right: 70px;
+.card-body {
+  display: flex;
+  gap: 16px;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-text p {
+  font-size: 13px;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Avatar with label */
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 50px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-white);
+}
+
+.avatar-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  background: var(--color-background-pink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.avatar-icon svg {
+  width: 10px;
+  height: 10px;
+  color: var(--color-secondary-red);
+}
+
+.avatar-name {
+  font-size: 11px;
+  color: var(--color-text-body);
+  font-weight: 500;
 }
 
 .cta-button {
@@ -119,158 +150,129 @@ body {
   padding: 14px 24px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-}
-
-.cta-button:hover {
-  background: #c9524d;
-}
-
-/* Avatar overlay */
-.avatar-float {
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 3px solid var(--color-white);
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 16px;
 }
 
 /* What's Inside Section */
 .inside-section {
-  padding: 28px 0;
-  width: 100%;
+  margin-bottom: 20px;
 }
 
 .inside-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--color-primary-dark);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .inside-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.inside-item:last-child {
-  margin-bottom: 0;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
 .inside-icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
   background: var(--color-background-pink);
-  border-radius: 10px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .inside-icon svg {
-  width: 20px;
-  height: 20px;
-  color: var(--color-secondary-red);
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-secondary-red);
+  fill: none;
+  stroke-width: 2;
 }
 
 .inside-content h4 {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-primary-dark);
   margin-bottom: 2px;
 }
 
 .inside-content p {
-  font-size: 13px;
-  color: var(--color-text-body-light);
-  line-height: 1.5;
+  font-size: 12px;
+  color: var(--color-text-body);
+  line-height: 1.4;
 }
 
 /* Disclaimer */
 .disclaimer {
-  padding: 20px 0;
   text-align: center;
-  width: 100%;
+  padding: 16px 0;
+  margin-bottom: 20px;
 }
 
 .disclaimer p {
-  font-size: 13px;
-  color: var(--color-text-body-light);
-  line-height: 1.6;
+  font-size: 12px;
+  color: var(--color-text-body);
+  line-height: 1.5;
 }
 
 /* Footer */
 .footer {
   background: var(--color-primary-dark);
-  padding: 32px 24px;
-  width: calc(100% + 48px);
   margin: 0 -24px -24px -24px;
-  border-radius: 0 0 0 0;
+  padding: 24px;
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .footer-logo {
-  height: 20px;
+  height: 18px;
   width: auto;
   filter: brightness(0) invert(1);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .footer-address {
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(255,255,255,0.6);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .footer-column h5 {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--color-white);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .footer-column p,
 .footer-column a {
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(255,255,255,0.6);
-  line-height: 1.8;
+  line-height: 1.6;
   text-decoration: none;
   display: block;
-}
-
-.footer-column a:hover {
-  color: var(--color-white);
 }
 
 .footer-right {
   text-align: right;
 }
 
-/* Social Icons */
 .social-icons {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 8px;
 }
 
 .social-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   background: var(--color-secondary-red);
   border-radius: 50%;
   display: flex;
@@ -278,27 +280,9 @@ body {
   justify-content: center;
 }
 
-.social-icon svg,
 .social-icon img {
-  width: 16px;
-  height: 16px;
-}
-
-/* Responsive */
-@media (max-width: 648px) {
-  .email-wrapper {
-    max-width: 100%;
-    border-radius: 0;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .footer-right {
-    text-align: left;
-  }
+  width: 14px;
+  height: 14px;
 }
 </style>
 </head>
@@ -308,7 +292,7 @@ body {
 
   <!-- Header -->
   <div class="header">
-    <img src="https://loophire.com/wp-content/uploads/2023/06/loophire-logo.svg" alt="Loophire" class="logo">
+    <img src="../assets/images/image 1.png" alt="Loophire" class="logo">
     <h1 class="title">Discovery call confirmed</h1>
   </div>
 
@@ -317,13 +301,28 @@ body {
 
   <!-- Content Card -->
   <div class="content-card">
-    <img src="https://loophire.com/wp-content/uploads/chris-loophire.jpg" alt="Chris" class="avatar-float">
     <h2 class="greeting">Hello,{{PROSPECT_NAME}}</h2>
-    <p class="description">
-      Your call is on {{CALL_DATE}}. Before we meet, we put together a short briefing so our time together is strategic not a generic walkthrough.<br><br>
-      We've taken what you shared, layered in our own research, and built a page showing exactly how we're thinking about your hiring landscape.
-    </p>
-    <a href="{{AGENDA_URL}}" class="cta-button">View our Agenda &nbsp;→</a>
+
+    <div class="card-body">
+      <div class="card-text">
+        <p>Your call is on {{CALL_DATE}}. Before we meet, we put together a short briefing so our time together is strategic not a generic walkthrough.</p>
+        <p>We've taken what you shared, layered in our own research, and built a page showing exactly how we're thinking about your hiring landscape.</p>
+      </div>
+
+      <div class="avatar-section">
+        <div class="avatar-wrapper">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" class="avatar-img">
+          <div class="avatar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+            </svg>
+          </div>
+        </div>
+        <span class="avatar-name">Chris</span>
+      </div>
+    </div>
+
+    <a href="{{AGENDA_URL}}" class="cta-button">View our Agenda →</a>
   </div>
 
   <!-- What's Inside Section -->
@@ -332,7 +331,7 @@ body {
 
     <div class="inside-item">
       <div class="inside-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg viewBox="0 0 24 24">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
       </div>
@@ -344,7 +343,7 @@ body {
 
     <div class="inside-item">
       <div class="inside-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg viewBox="0 0 24 24">
           <path d="M18 20V10M12 20V4M6 20v-6"/>
         </svg>
       </div>
@@ -356,7 +355,7 @@ body {
 
     <div class="inside-item">
       <div class="inside-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="10"/>
           <path d="M12 6v6l4 2"/>
         </svg>
@@ -377,7 +376,7 @@ body {
   <div class="footer">
     <div class="footer-top">
       <div class="footer-left">
-        <img src="https://loophire.com/wp-content/uploads/2023/06/loophire-logo.svg" alt="Loophire" class="footer-logo">
+        <img src="../assets/images/image 1.png" alt="Loophire" class="footer-logo">
         <p class="footer-address">11718 Nicholas St, STE 101 Omaha,<br>NE 68154</p>
       </div>
 
@@ -389,19 +388,19 @@ body {
 
       <div class="footer-column footer-right">
         <h5>Get matched</h5>
-        <a href="https://loophire.com/employers">Employers</a>
-        <a href="https://loophire.com/job-seekers">Job seekers</a>
+        <a href="#">Employers</a>
+        <a href="#">Job seekers</a>
       </div>
     </div>
 
     <div class="social-icons">
-      <a href="https://linkedin.com/company/loophire" class="social-icon">
+      <a href="#" class="social-icon">
         <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn">
       </a>
-      <a href="https://instagram.com/loophire" class="social-icon">
+      <a href="#" class="social-icon">
         <img src="../assets/icons/Instagram.svg" alt="Instagram">
       </a>
-      <a href="https://facebook.com/loophire" class="social-icon">
+      <a href="#" class="social-icon">
         <img src="../assets/icons/Facebook.svg" alt="Facebook">
       </a>
     </div>
