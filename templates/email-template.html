@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discovery Call Confirmed | Loophire</title>
+<!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<![endif]-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Figma Design System Colors */
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-primary-dark: #1C223C;           /* Bg/Primary N/Dark, Text/Heading */
+  --color-secondary-red: #DE635E;          /* Secondary/Pasta Red/500, Button/Primary */
+  --color-surface-page: #EAEBF0;           /* Surface/Page */
+  --color-text-body-light: rgba(0,0,0,0.70); /* Text/Body/Light */
+  --color-background-pink: rgba(249,225,225,0.24); /* #F9E1E1 at 24% */
+  --color-surface-light: rgba(234,235,240,0.24);   /* #EAEBF0 at 24% */
+  --color-surface-medium: rgba(234,235,240,0.32);  /* #EAEBF0 at 32% */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-surface-page);
+  color: var(--color-primary-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.email-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 648px;
+  margin: 0 auto;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--color-white);
+}
+
+/* Header */
+.header {
+  padding: 0 0 20px;
+  width: 100%;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-top: 16px;
+}
+
+/* Hero Image */
+.hero-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Content Card */
+.content-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--color-background-pink);
+  margin-top: -40px;
+  position: relative;
+  z-index: 1;
+}
+
+.greeting {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--color-text-body-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  background: var(--color-secondary-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background: #c9524d;
+}
+
+/* Avatar overlay */
+.avatar-container {
+  position: relative;
+  width: 100%;
+}
+
+.avatar-float {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  object-fit: cover;
+}
+
+/* What's Inside Section */
+.inside-section {
+  padding: 28px 0;
+  width: 100%;
+}
+
+.inside-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+}
+
+.inside-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.inside-item:last-child {
+  margin-bottom: 0;
+}
+
+.inside-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: var(--color-background-pink);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inside-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-secondary-red);
+}
+
+.inside-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 2px;
+}
+
+.inside-content p {
+  font-size: 13px;
+  color: var(--color-text-body-light);
+  line-height: 1.5;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: var(--color-surface-light);
+  padding: 20px 24px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.disclaimer p {
+  font-size: 13px;
+  color: var(--color-text-body-light);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background: var(--color-primary-dark);
+  padding: 32px 24px;
+  width: calc(100% + 48px);
+  margin: 0 -24px -24px -24px;
+  border-radius: 0 0 0 0;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.footer-logo {
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  margin-bottom: 12px;
+}
+
+.footer-address {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+.footer-column h5 {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-column a:hover {
+  color: var(--color-white);
+}
+
+.footer-right {
+  text-align: right;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--color-secondary-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 648px) {
+  .email-wrapper {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="email-wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <img src="https://loophire.com/wp-content/uploads/2023/06/loophire-logo.svg" alt="Loophire" class="logo">
+    <h1 class="title">Discovery call confirmed</h1>
+  </div>
+
+  <!-- Hero Image -->
+  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=300&fit=crop&crop=face" alt="Welcome" class="hero-image">
+
+  <!-- Content Card -->
+  <div class="content-card">
+    <div class="avatar-container">
+      <h2 class="greeting">Hello, {{PROSPECT_NAME}}</h2>
+      <img src="https://loophire.com/wp-content/uploads/chris-loophire.jpg" alt="Chris" class="avatar-float">
+    </div>
+    <p class="description">
+      Your call is on {{CALL_DATE}}. Before we meet, we put together a short briefing so our time together is strategic not a generic walkthrough.<br><br>
+      We've taken what you shared, layered in our own research, and built a page showing exactly how we're thinking about your hiring landscape.
+    </p>
+    <a href="{{AGENDA_URL}}" class="cta-button">View our Agenda &nbsp;→</a>
+  </div>
+
+  <!-- What's Inside Section -->
+  <div class="inside-section">
+    <h3 class="inside-title">What is inside?</h3>
+
+    <div class="inside-item">
+      <div class="inside-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <div class="inside-content">
+        <h4>What we heard</h4>
+        <p>Your priorities and constraints, reflected back for alignment</p>
+      </div>
+    </div>
+
+    <div class="inside-item">
+      <div class="inside-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 20V10M12 20V4M6 20v-6"/>
+        </svg>
+      </div>
+      <div class="inside-content">
+        <h4>The numbers</h4>
+        <p>17-day placements, 96% retention how we stack up</p>
+      </div>
+    </div>
+
+    <div class="inside-item">
+      <div class="inside-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+      </div>
+      <div class="inside-content">
+        <h4>How it works</h4>
+        <p>Our 8-stage framework and what we'll cover on the call</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    <p>It's direct, relevant, and takes about 3 minutes. If anything's off, we'll fix it on the call alignment is the point</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <img src="https://loophire.com/wp-content/uploads/2023/06/loophire-logo.svg" alt="Loophire" class="footer-logo">
+        <p class="footer-address">11718 Nicholas St, STE 101 Omaha,<br>NE 68154</p>
+      </div>
+
+      <div class="footer-column">
+        <h5>Contact us</h5>
+        <p>402-769-2775</p>
+        <a href="mailto:support@loophire.com">support@loophire.com</a>
+      </div>
+
+      <div class="footer-column footer-right">
+        <h5>Get matched</h5>
+        <a href="https://loophire.com/employers">Employers</a>
+        <a href="https://loophire.com/job-seekers">Job seekers</a>
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://linkedin.com/company/loophire" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="https://youtube.com/@loophire" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+      <a href="https://facebook.com/loophire" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
