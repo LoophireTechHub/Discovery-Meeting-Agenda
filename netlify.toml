@@ -1,0 +1,15 @@
+# Netlify configuration
+
+[build]
+  publish = "."
+
+# Redirects
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/LoophireTechHub/Discovery-Meeting-Agenda"
+  status = 302
+
+[[redirects]]
+  from = "/admin"
+  to = "https://app.netlify.com/projects/loophire-discovery-pages"
+  status = 302
